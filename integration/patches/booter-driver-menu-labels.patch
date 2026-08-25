@@ -1,0 +1,11 @@
+diff --git a/user/menu.c b/user/menu.c
+--- a/user/menu.c
++++ b/user/menu.c
+@@ -95,6 +95,6 @@ static char *yes_no_options[] = { "Yes", "No" };
+ static char *ms_location_options[] = { "ux0:pspemu", "ur0:pspemu", "imc0:pspemu", "xmc0:pspemu", "uma0:pspemu" };
+ static char *usbdevice_options[] = { "Memory Card", "Internal Storage", "SD2Vita", "PSVSD" };
+-static char *drivers_options[] = { "INFERNO", "MARCH33", "NP9660" };
++static char *drivers_options[] = { "NP9660", "INFERNO", "MARCH33" };
+ static char *execute_options[] = { "EBOOT.BIN", "EBOOT.OLD", "BOOT.BIN" };
+ static char *cpuspeed_options[] = { "Default", "20/10", "50/25", "75/37", "100/50", "111/55", "122/61", "133/66", "166/83", "200/100", "222/111", "266/133", "288/144", "300/150", "333/166" };
+ static char *settings_options[] = { "General", "Individual" };

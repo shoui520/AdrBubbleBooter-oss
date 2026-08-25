@@ -1,0 +1,8 @@
+/adrbubblebooter:
+  attributes: 0
+  version:
+    major: 1
+    minor: 1
+  nid: 0xBF7F98B3
+  main:
+    start: module_start

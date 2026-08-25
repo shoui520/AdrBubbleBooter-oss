@@ -1,0 +1,9 @@
+AdrenalineUser:
+  attributes: 0
+  version:
+    major: 1
+    minor: 0
+  nid: 0x532809F2
+  main:
+    start: module_start
+    stop: module_stop

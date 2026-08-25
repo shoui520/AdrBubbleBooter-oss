@@ -1,0 +1,1 @@
+	.section .sbss,"aw",@nobits

@@ -1,0 +1,8 @@
+ebooter:
+  attributes: 0
+  version:
+    major: 1
+    minor: 1
+  nid: 0x83317876
+  main:
+    start: _start

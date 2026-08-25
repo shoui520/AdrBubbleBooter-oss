@@ -1,0 +1,34 @@
+/* COMPATIBILITY
+   - HLSL compilers (untested)
+   - Cg compilers
+*/
+
+/*
+   Author: Gigaherz
+   License: Public domain
+*/
+
+struct input
+{
+    float2 video_size;
+    float2 texture_size;
+    float2 output_size;
+    float frame_count;
+    float frame_direction;
+    float frame_rotation;
+};
+
+void main (
+    float4 aPosition, 
+    float2 aTexcoord, 
+    uniform float4x4 wvp,
+    uniform input IN, 
+    out float4 vPosition : POSITION,
+    out float2 vTexcoord : TEXCOORD0,
+    out float2 omega : TEXCOORD1
+    )
+{
+    vPosition = mul(aPosition, wvp);
+    vTexcoord = aTexcoord;
+    omega = 3.141592654 * 2 * IN.texture_size;
+}

@@ -1,0 +1,70 @@
+0x03090010
+$/kd/sysmem.prx VGUPE
+$/kd/loadcore.prx VGUPE
+$/kd/exceptionman.prx VGUPE
+$/kd/interruptman.prx VGUPE
+$/kd/threadman.prx VGUPE
+$/kd/kermit.prx VGUPE
+$/kd/dmacman.prx VGUPE
+$/kd/systimer.prx VGUPE
+$/kd/iofilemgr.prx VGUPE
+$/kd/memlmd_01g.prx VGUPE
+$/kd/modulemgr.prx VGUPE
+$/kd/systemctrl.prx VGUPE
+$/kd/init.prx VGUPE
+$/kd/loadexec_01g.prx VGUPE
+$/kd/kermit_lowio.prx VGUPE
+$/kd/ge.prx VGUPE
+$/kd/kermit_peripheral.prx VGUPE
+$/kd/kermit_idstorage.prx VGUPE
+$/kd/kermit_rtc.prx VGUPE
+$/kd/kermit_display.prx VGUPE
+$/kd/kermit_ctrl.prx VGUPE
+$/kd/kermit_flashfs.prx VGUPE
+$/kd/kermit_msfs.prx VGUPE
+$/kd/kermit_power.prx VGUPE
+$/kd/kermit_msemu.prx VGUPE
+$/kd/kermit_audio.prx VGUE
+$/kd/kermit_hpremote.prx VGUPE
+$/kd/openpsid.prx VGUPE
+$/kd/kermit_usb.prx VGE
+$/kd/kermit_wlan.prx VGUE
+$/kd/registry.prx VGUPE
+$/kd/chkreg.prx VUP
+$/kd/mesg_led_01g.prx VGUPE
+$/kd/semawm.prx V
+$/kd/amctrl.prx VGPE
+$/kd/npdrm.prx VP
+$/kd/iofilemgr_dnas.prx VGPE
+$/kd/mediaman.prx VGUE
+$/kd/np9660.prx
+$/kd/isofs.prx
+$/kd/chnnlsv.prx VP
+$/kd/kermit_utility.prx VGUPE
+$/kd/popsman.prx P
+$/kd/popcorn.prx P
+$/kd/kermit_me_wrapper.prx VGUPE
+$/kd/vaudio.prx VU
+$/kd/impose_01g.prx VGUPE
+$/kd/vshbridge_msapp.prx E
+$/kd/avcodec.prx V
+$/kd/mediasync.prx VGUPE
+$/kd/vshbridge.prx VU
+$/kd/mlnbridge.prx
+$/kd/mlnbridge_msapp.prx
+$/kd/vshctrl.prx V
+$/kd/booter.prx V
+$%/kd/usersystemlib.prx VGUPE
+$%/vsh/module/mlncmn.prx
+$%/vsh/module/mcore.prx
+$%/vsh/module/mlnapp_proxy.prx
+$%/vsh/module/libfont_hv.prx P
+$%/vsh/module/pafmini.prx P
+%%/kd/dummy_anchor_IhariUafaayk98.prx GUE
+$%/kd/libatrac3plus.prx V
+$%/vsh/module/paf.prx V
+$%/vsh/module/common_gui.prx V
+$%/vsh/module/common_util.prx VP
+$%/vsh/module/libpspvmc.prx P
+%%/kd/dummy_anchor_IhariUafaayk98.prx P
+$%%/vsh/module/vshmain.prx V

@@ -1,0 +1,12 @@
+build/
+cmake-build-*/
+tools/__pycache__/
+*.elf
+*.velf
+
+# The two in-tree Make builds are inputs to the aggregate build, but their
+# compiler outputs are never source artifacts.
+src/psp/booter/*.o
+src/psp/booter/*.prx
+src/vita/shaders/*.o
+src/vita/shaders/*.a
