@@ -15,6 +15,12 @@ project(AdrBubbleBooterOSS C)
 include("${VITASDK}/share/vita.cmake" REQUIRED)
 include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/AdrBubbleSelf.cmake" REQUIRED)
 
+option(
+  ADRBUBBLE_ISAGE_CONFIG
+  "Use the compact Adrenaline 8 Vita configuration layout"
+  OFF
+)
+
 set(
   ADRBUBBLE_ADR_ELF_CREATE
   "${ADRBUBBLE_ELF_CREATE}"

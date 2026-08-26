@@ -26,7 +26,11 @@ enum ContentType {
  * reference booter. They intentionally do not use a newer systemctrl.h enum.
  */
 enum BootConfigIndex {
+#if ADRBUBBLE_ISAGE_CONFIG
+	BOOT_CONFIG_MARCH33 = 4,
+#else
 	BOOT_CONFIG_MARCH33 = 1,
+#endif
 	BOOT_CONFIG_NP9660  = 2,
 	BOOT_CONFIG_INFERNO = 3,
 };

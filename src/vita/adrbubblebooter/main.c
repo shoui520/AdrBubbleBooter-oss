@@ -126,7 +126,11 @@ int module_start(SceSize args, void *argp) {
 		return 0;
 
 	if (check_file(boot_info.file_path) >= 0) {
+#if ADRBUBBLE_ISAGE_CONFIG
+		config[0x0B] = (unsigned char)location; /* Adrenaline 8 byte-layout ms_location. */
+#else
 		*(int32_t *)(config + 0x18) = location; /* AdrenalineConfig.ms_location. */
+#endif
 		const char *output = boot_info.customized == 1
 			? bubble_config_path
 			: adrenaline_config_path;

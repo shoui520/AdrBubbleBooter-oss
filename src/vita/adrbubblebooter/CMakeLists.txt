@@ -29,6 +29,9 @@ target_compile_options(adrbubblebooter PRIVATE
   -Wall
   -Wextra
 )
+if(ADRBUBBLE_ISAGE_CONFIG)
+  target_compile_definitions(adrbubblebooter PRIVATE ADRBUBBLE_ISAGE_CONFIG=1)
+endif()
 set_source_files_properties(main.c PROPERTIES COMPILE_OPTIONS
   "-fno-builtin;-fno-toplevel-reorder;-mword-relocations"
 )

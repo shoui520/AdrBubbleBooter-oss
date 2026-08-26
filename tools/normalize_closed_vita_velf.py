@@ -19,7 +19,12 @@ from pathlib import Path
 
 PROFILES = {
     "adrbubblebooter": {
-        "input_sha256": "006e11d82a6a067d975885f4946f79d94151b4411b0a53e20e035bea86313b0a",
+        "input_sha256": {
+            # Leecherman/TheFloW configuration layout.
+            "006e11d82a6a067d975885f4946f79d94151b4411b0a53e20e035bea86313b0a",
+            # Isage Adrenaline 8 configuration layout.
+            "ed966e28f90fe83a4933e135e0cf4502c1e147d617c858f0c542338d8ecad75d",
+        },
         "input_size": 0x12962,
         "old_relocation": 0x11D50,
         "new_relocation": 0x11DA0,
@@ -27,7 +32,12 @@ PROFILES = {
         "output_size": 0x129BA,
     },
     "bootconv": {
-        "input_sha256": "5fca7818213968c9c1004f3d12449ff39d3a3d1bb6b5528fe45f5c9f16528422",
+        "input_sha256": {
+            # Leecherman/TheFloW configuration layout.
+            "5fca7818213968c9c1004f3d12449ff39d3a3d1bb6b5528fe45f5c9f16528422",
+            # Isage Adrenaline 8 configuration layout.
+            "9d533a44b615fd5d8fa556fc0202d5cd507110e98ba6c835100ce1c21d901889",
+        },
         "input_size": 0x12ABA,
         "old_relocation": 0x11EE0,
         "new_relocation": 0x11F10,
@@ -65,7 +75,7 @@ def normalize(data: bytes, module: str) -> bytes:
     profile = PROFILES[module]
     digest = hashlib.sha256(data).hexdigest()
     require(len(data) == profile["input_size"], "input VELF size changed")
-    require(digest == profile["input_sha256"], f"input VELF hash changed: {digest}")
+    require(digest in profile["input_sha256"], f"input VELF hash changed: {digest}")
     require(data[:7] == b"\x7fELF\x01\x01\x01", "input is not little-endian ELF32")
     require(u32(data, 0x1C) == PROGRAM_HEADER_OFFSET, "program-header offset changed")
     old_section_table = u32(data, 0x20)

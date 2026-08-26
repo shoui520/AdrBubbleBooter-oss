@@ -86,9 +86,13 @@ int module_start(SceSize args, void *argp) {
 	);
 
 	if (check_file(boot_inf_path) >= 0 && check_file(boot_bin_path) < 0) {
+#if ADRBUBBLE_ISAGE_CONFIG
+		const char *prefix = get_device_prefix(adrenaline_config[0x0B]);
+#else
 		const char *prefix = get_device_prefix(
 			*(int32_t *)(adrenaline_config + 0x18) /* AdrenalineConfig.ms_location. */
 		);
+#endif
 		char *legacy_path = read_ini_value(boot_inf_path, "PATH");
 		snprintf(
 			boot_info.file_path,
