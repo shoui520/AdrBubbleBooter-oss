@@ -4,8 +4,8 @@ AdrBubbleBooter OSS is an open-source implementation of the complete
 AdrBubbleBooter stack used by Adrenaline Bubble Manager to launch PSP and PS1
 games directly from Vita LiveArea bubbles. It builds the shared Vita modules,
 the per-bubble EBOOT, the PSP-side booter, and the required Adrenaline modules.
-The default build uses the current Adrenaline integration, including the
-low-latency direct-IFTU Sharp Bilinear Simple path.
+
+By default, the build process will include my menu driver label fix, which was a genuine problem in LMAN's original AdrBubbleBooter. 
 
 ## Build instructions
 
