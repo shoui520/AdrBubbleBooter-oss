@@ -27,12 +27,15 @@ enum ContentType {
  */
 enum BootConfigIndex {
 #if ADRBUBBLE_ISAGE_CONFIG
-	BOOT_CONFIG_MARCH33 = 4,
+	/* SEUmdModes in Isage's pinned psp-cfw-sdk, not ISO menu indices. */
+	BOOT_CONFIG_MARCH33 = 2,
+	BOOT_CONFIG_NP9660  = 3,
+	BOOT_CONFIG_INFERNO = 4,
 #else
 	BOOT_CONFIG_MARCH33 = 1,
-#endif
 	BOOT_CONFIG_NP9660  = 2,
 	BOOT_CONFIG_INFERNO = 3,
+#endif
 };
 
 enum BubbleDriver {
